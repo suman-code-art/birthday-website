@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy 22nd Birthday! 🎂</title>
+<meta name="theme-color" content="#070b1f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<div class="orb o1"></div><div class="orb o2"></div>
+
+<!-- 1. OPENING -->
+<section id="intro" class="screen">
+  <div class="cube" aria-hidden="true"><i>22</i><i>🎂</i><i>✨</i><i>🎁</i><i>🎬</i><i>⭐</i></div>
+  <p class="date">06 • 10 • 2004</p>
+  <h1>Someone just turned 22 👀</h1>
+  <p class="small">I made something for you...</p>
+  <button id="openBtn" class="btn">Open Your Birthday Surprise 🎁</button>
+</section>
+
+<main id="main" hidden>
+  <!-- 2. REVEAL -->
+  <section class="screen hero">
+    <h2 class="title">🎉 HAPPY 22nd BIRTHDAY! 🎉</h2>
+    <p class="sub">Welcome to 22!</p>
+    <div class="big21" aria-hidden="true">22</div>
+    <figure class="polaroid hero-photo" data-i="0"><img src="assets/photo1.jpg" alt="Birthday boy" loading="eager"><figcaption>Birthday boy spotted.</figcaption></figure>
+
+    <div class="player glass">
+      <button id="playBtn" aria-label="Play or pause">⏸</button>
+      <span class="plabel">🎵 Birthday Song</span>
+      <input id="seek" type="range" min="0" max="100" value="0" aria-label="Progress">
+      <span class="vol" aria-hidden="true">🔊</span>
+      <input id="vol" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume">
+    </div>
+  </section>
+
+  <!-- 3. GALLERY -->
+  <section class="gallery">
+    <h2>The Hall of Fame 📸</h2>
+    <div class="grid">
+      <figure class="polaroid" data-i="1"><img src="assets/photo2.jpg" alt="Photo 2" loading="lazy"><figcaption>21 years of this guy 😂</figcaption></figure>
+      <figure class="polaroid" data-i="2"><img src="assets/photo3.jpg" alt="Photo 3" loading="lazy"><figcaption>Okay, this one is actually good.</figcaption></figure>
+      <figure class="polaroid" data-i="3"><img src="assets/photo4.jpg" alt="Photo 4" loading="lazy"><figcaption>Main character moment.</figcaption></figure>
+      <figure class="polaroid" data-i="4"><img src="assets/photo5.jpg" alt="Photo 5" loading="lazy"><figcaption>Evidence that you clean up nicely.</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 4. MESSAGE -->
+  <section class="wish glass">
+    <h2>A Little Birthday Wish For You 🎂</h2>
+    <div id="wishText" class="wish-text">
+      <p>Happy 22nd Birthday! 🎉</p>
+      <p>Akki turns 22 today 🎉</p>
+      <p>Wishing you a year full of good luck, happiness, success, new opportunities and amazing memories.</p>
+      <p>I hope you achieve everything you're working towards and get to do more of the things you love.</p>
+      <p>Keep creating, keep learning, keep exploring, and keep doing the things that make you happy.</p>
+      <p>Here's to 22 and everything that's waiting ahead.</p>
+      <p>Have an absolutely amazing birthday! 🎂✨</p>
+    </div>
+  </section>
+
+  <!-- 5. FINALE -->
+  <section id="finale" class="screen">
+    <figure class="polaroid hero-photo" data-i="5"><img src="assets/photo1.jpg" alt="Best photo" loading="lazy"><figcaption>Main character moment.</figcaption></figure>
+    <h2>And yes... you're officially 22 now. 😂</h2>
+    <p class="title2">Happy Birthday! 🎉</p>
+    <p class="sub">Hope this year is your best one yet.</p>
+  </section>
+</main>
+
+<div id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button id="lbClose" aria-label="Close">✕</button>
+  <img id="lbImg" alt=""><p id="lbCap"></p>
+</div>
+
+<audio id="song" src="assets/birthday-song.mp3" preload="auto" loop></audio>
+<script src="script.js"></script>
+</body>
+</html>
